@@ -1,0 +1,3 @@
+echo " usage ./split_multyfasta\n inputfile > output-folder"
+
+awk '/^>/{f=++x".fasta"} {print >>x;close(x)}'
