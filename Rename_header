@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Script rename header with spaces and braces"
+echo "Usage awk -f Rename_header.sh input.txt"
+
+
+awk '/^>/ {split($LINE,x,"["); gsub("]","",x[2]); gsub(" ","_",x[2]); print ">"x[2]} !/^>/ {print}'
+
+
+echo "all god exit"
+
+exit
